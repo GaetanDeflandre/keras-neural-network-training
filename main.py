@@ -59,5 +59,15 @@ history = model.fit(X_train, y_train, epochs=20, validation_data=(X_test, y_test
 
 # %%
 # Show the accuracy
-plt.plot(history.history['acc'])
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
 plt.show()
+
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.plot(history.history['loss'])
+plt.show()
+
+# %%
+# Evaluating the model
+score = model.evaluate(X_test, y_test)
