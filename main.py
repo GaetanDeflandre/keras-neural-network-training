@@ -37,6 +37,6 @@ print(y_train.shape)
 print(y_test.shape)
 
 model = Sequential()
-model.add(Dense(512, activation='relu', input_shape(784,)))
+model.add(Dense(512, activation='relu', input_shape=(784,)))
 model.add(Dense(512, activation='relu'))
 model.add(Dense(10, activation='softmax'))
